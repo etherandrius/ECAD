@@ -5,6 +5,7 @@ vlib work
 # compile our SystemVerilog files
 vlog debounce.sv
 vlog tb_debounce.sv
+vlog synchroniser.sv
 # point the simulator at the compiled design
 vsim work.tb_debounce
 # run simulation for 100 million time units = 0.1s

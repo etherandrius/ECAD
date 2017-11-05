@@ -10,27 +10,50 @@ cModel Technology
 d/home/ecad/Downloads/rotary
 vdebounce
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1508854641
+Z1 !s110 1509919601
 !i10b 1
-!s100 gI2][7RCkA7TP6?[][_[13
-II:ioSzGggemaBLXA71:@B3
+!s100 MaI1U4jI_TPYDBC76P`MM2
+I0A@P[kSML7bZ:G]TEJc3e2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 debounce_sv_unit
 S1
-Z3 d/home/ecad/exercise1
-w1508854290
+Z3 d/home/ecad/git/ECAD/exercise1
+Z4 w1509917173
 8debounce.sv
 Fdebounce.sv
 L0 3
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1508854641.000000
+Z6 !s108 1509919601.000000
 !s107 debounce.sv|
 !s90 debounce.sv|
 !i113 1
-Z6 tCvgOpt 0
+Z7 tCvgOpt 0
+vsynchroniser
+R0
+R1
+!i10b 1
+!s100 7g7KgRID9OEC>T?LcRYH<1
+IN<eO^If0CMT0V@LZ[=dGm1
+R2
+!s105 synchroniser_sv_unit
+S1
+R3
+R4
+8synchroniser.sv
+Fsynchroniser.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 synchroniser.sv|
+!s90 synchroniser.sv|
+!i113 1
+R7
 vtb_debounce
 R0
 R1
@@ -41,16 +64,16 @@ R2
 !s105 tb_debounce_sv_unit
 S1
 R3
-w1505592978
+R4
 8tb_debounce.sv
 Ftb_debounce.sv
 L0 8
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 tb_debounce.sv|
 !s90 tb_debounce.sv|
 !i113 1
-R6
+R7
