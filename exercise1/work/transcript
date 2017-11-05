@@ -1,0 +1,7 @@
+# vsim -c runsim.do 
+# Start time: 15:25:10 on Oct 24,2017
+# ** Error (suppressible): (vsim-19) Failed to access library 'runsim' at "runsim".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 15:25:10 on Oct 24,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

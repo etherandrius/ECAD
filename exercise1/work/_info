@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/ecad/Downloads/rotary
+vdebounce
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1508854641
+!i10b 1
+!s100 gI2][7RCkA7TP6?[][_[13
+II:ioSzGggemaBLXA71:@B3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 debounce_sv_unit
+S1
+Z3 d/home/ecad/exercise1
+w1508854290
+8debounce.sv
+Fdebounce.sv
+L0 3
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1508854641.000000
+!s107 debounce.sv|
+!s90 debounce.sv|
+!i113 1
+Z6 tCvgOpt 0
+vtb_debounce
+R0
+R1
+!i10b 1
+!s100 64XM::6oZ@IDEYFa^9?ad1
+I<Wd^Slk4@0L:z_>KAce1I2
+R2
+!s105 tb_debounce_sv_unit
+S1
+R3
+w1505592978
+8tb_debounce.sv
+Ftb_debounce.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 tb_debounce.sv|
+!s90 tb_debounce.sv|
+!i113 1
+R6

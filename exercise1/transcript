@@ -1,0 +1,32 @@
+# do tb_debounce.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Start time: 15:17:21 on Oct 24,2017
+# vlog debounce.sv 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# -- Compiling module debounce
+# 
+# Top level modules:
+# 	debounce
+# End time: 15:17:21 on Oct 24,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Start time: 15:17:21 on Oct 24,2017
+# vlog tb_debounce.sv 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# -- Compiling module tb_debounce
+# 
+# Top level modules:
+# 	tb_debounce
+# End time: 15:17:21 on Oct 24,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.tb_debounce 
+# Start time: 15:17:21 on Oct 24,2017
+# Loading sv_std.std
+# Loading work.tb_debounce
+# Loading work.debounce
+# ** Error: (vsim-3033) debounce.sv(14): Instantiation of 'synchronizer' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_debounce/dut File: debounce.sv
+#         Searched libraries:
+#             /home/ecad/exercise1/work
+# Error loading design
+# End time: 15:17:22 on Oct 24,2017, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
