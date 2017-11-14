@@ -1,41 +1,65 @@
-# do tb_debounce.do
+# do tb_rotary.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Start time: 22:06:41 on Nov 05,2017
+# Start time: 21:44:28 on Nov 14,2017
 # vlog debounce.sv 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 # -- Compiling module debounce
 # 
 # Top level modules:
 # 	debounce
-# End time: 22:06:41 on Nov 05,2017, Elapsed time: 0:00:00
+# End time: 21:44:28 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Start time: 22:06:41 on Nov 05,2017
-# vlog tb_debounce.sv 
+# Start time: 21:44:28 on Nov 14,2017
+# vlog rotary.sv 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# -- Compiling module tb_debounce
+# -- Compiling module rotary
 # 
 # Top level modules:
-# 	tb_debounce
-# End time: 22:06:41 on Nov 05,2017, Elapsed time: 0:00:00
+# 	rotary
+# End time: 21:44:28 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Start time: 22:06:41 on Nov 05,2017
+# Start time: 21:44:28 on Nov 14,2017
+# vlog tb_rotary.sv 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# -- Compiling module tb_rotary
+# 
+# Top level modules:
+# 	tb_rotary
+# End time: 21:44:28 on Nov 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Start time: 21:44:28 on Nov 14,2017
 # vlog synchroniser.sv 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 # -- Compiling module synchroniser
 # 
 # Top level modules:
 # 	synchroniser
-# End time: 22:06:41 on Nov 05,2017, Elapsed time: 0:00:00
+# End time: 21:44:28 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim work.tb_debounce 
-# Start time: 22:06:41 on Nov 05,2017
+# vsim work.tb_rotary 
+# Start time: 21:44:28 on Nov 14,2017
 # Loading sv_std.std
-# Loading work.tb_debounce
+# Loading work.tb_rotary
+# Loading work.rotary
 # Loading work.debounce
 # Loading work.synchroniser
-# Finishing.
-# No errors. Tests passed!
-# ** Note: $finish    : tb_debounce.sv(119)
-#    Time: 30000010 ns  Iteration: 1  Instance: /tb_debounce
-# End time: 22:06:44 on Nov 05,2017, Elapsed time: 0:00:03
+#         20 ---------- Start simulation. Counter should be   0, is   0 ----------
+#   15000020 ---------- Clean left turn. Counter should be 255, is 255 ----------
+#   30000020 ---------- Clean right turn. Counter should be   0, is   0 ----------
+#   45080020 ---------- Bouncy left turn. Counter should be 255, is 255 ----------
+#   60160020 ---------- Bouncy right turn. Counter should be   0, is   0 ----------
+#   75240020 ---------- Bouncy right turn. Counter should be   1, is   1 ----------
+#   90320020 ---------- Bouncy right turn. Counter should be   2, is   2 ----------
+#  105400020 ---------- Bouncy right turn. Counter should be   3, is   3 ----------
+#  120480020 ---------- Bouncy right turn. Counter should be   4, is   4 ----------
+#  135560020 ---------- Long bouncy left turn. Counter should be   3, is   3 ----------
+#  150640020 ---------- Long bouncy right turn. Counter should be   4, is   4 ----------
+#  165720020 ---------- Very long bouncy left turn. Counter should be   3, is   3 ----------
+#  181520020 ---------- Very long bouncy right turn. Counter should be   4, is   4 ----------
+#  181720020 ---------- Wild left bounce. Counter should be   4, is   4 ----------
+#  181920020 ---------- Wild right bounce. Counter should be   4, is   4 ----------
+# SUCCESS
+# ** Note: $finish    : tb_rotary.sv(211)
+#    Time: 181920020 ns  Iteration: 1  Instance: /tb_rotary
+# End time: 21:45:17 on Nov 14,2017, Elapsed time: 0:00:49
 # Errors: 0, Warnings: 0

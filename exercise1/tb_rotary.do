@@ -6,6 +6,7 @@ vlib work
 vlog debounce.sv
 vlog rotary.sv
 vlog tb_rotary.sv
+vlog synchroniser.sv
 # point the simulator at the compiled design
 vsim work.tb_rotary
 # run simulation for 200 million cycles
