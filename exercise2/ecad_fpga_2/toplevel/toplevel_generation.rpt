@@ -1,0 +1,27 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/ecad/git/ECAD/exercise2/ecad_fpga_2/toplevel.qsys --block-symbol-file --output-directory=/home/ecad/git/ECAD/exercise2/ecad_fpga_2/toplevel --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ecad_fpga_2/toplevel.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/ecad/git/ECAD/exercise2/ecad_fpga_2/toplevel.qsys --synthesis=VERILOG --output-directory=/home/ecad/git/ECAD/exercise2/ecad_fpga_2/toplevel/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading ecad_fpga_2/toplevel.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: toplevel: Generating toplevel "toplevel" for QUARTUS_SYNTH
+Info: toplevel: Done "toplevel" with 1 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
