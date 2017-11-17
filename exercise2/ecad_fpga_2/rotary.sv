@@ -23,10 +23,11 @@ module rotary
 
     
    /* Synchronous value manipulation logic */
-   always_ff @(posedge clk) 
+   always_ff @(posedge clk)
    begin
      rot_cw  <= 0;
      rot_ccw <= 0;
+     state <= debounced_rotary_in;
 
      if(rst)
      begin
@@ -46,7 +47,6 @@ module rotary
          rotary_pos <= rotary_pos - 1;
        end
 
-       state <= debounced_rotary_in;
      end
    end
 

@@ -1,5 +1,5 @@
 Flow report for toplevel
-Fri Nov 17 01:27:21 2017
+Fri Nov 17 22:25:13 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 17 01:27:21 2017       ;
+; Flow Status                     ; Successful - Fri Nov 17 22:25:13 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 63 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 83                                          ;
+; Logic utilization (in ALMs)     ; 99 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 135                                         ;
 ; Total pins                      ; 246 / 457 ( 54 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -68,32 +68,38 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/17/2017 01:25:06 ;
+; Start date & time ; 11/17/2017 22:22:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; toplevel            ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 8796747652916.151088190605051          ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                     ; Verilog_2001  ; --          ; --             ;
-; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                    ; --            ; --          ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                  ;
++-------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 8796747652916.151095735105938                                ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                    ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                         ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; rotary_hex/synthesis/../rotary_hex.cmp                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; rotary_hex/synthesis/../../rotary_hex.qsys                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                          ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                 ; --            ; --          ; --             ;
+; SLD_FILE                            ; rotary_hex/synthesis/rotary_hex.debuginfo                    ; --            ; --          ; --             ;
+; SLD_INFO                            ; QSYS_NAME rotary_hex HAS_SOPCINFO 1 GENERATION_ID 1510930615 ; --            ; rotary_hex  ; --             ;
+; SOPCINFO_FILE                       ; rotary_hex/synthesis/../../rotary_hex.sopcinfo               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                           ; --            ; --          ; --             ;
+; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                                           ; Verilog_2001  ; --          ; --             ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                                          ; --            ; --          ; --             ;
++-------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -101,12 +107,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 960 MB              ; 00:00:21                           ;
-; Fitter                    ; 00:01:22     ; 1.0                     ; 2047 MB             ; 00:01:19                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 973 MB              ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:13     ; 1.0                     ; 1163 MB             ; 00:00:11                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1160 MB             ; 00:00:01                           ;
-; Total                     ; 00:02:11     ; --                      ; --                  ; 00:02:02                           ;
+; Analysis & Synthesis      ; 00:00:23     ; 1.0                     ; 959 MB              ; 00:00:21                           ;
+; Fitter                    ; 00:01:44     ; 1.0                     ; 2049 MB             ; 00:01:39                           ;
+; Assembler                 ; 00:00:12     ; 1.0                     ; 976 MB              ; 00:00:11                           ;
+; TimeQuest Timing Analyzer ; 00:00:16     ; 1.0                     ; 1164 MB             ; 00:00:14                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 1159 MB             ; 00:00:02                           ;
+; Total                     ; 00:02:37     ; --                      ; --                  ; 00:02:27                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

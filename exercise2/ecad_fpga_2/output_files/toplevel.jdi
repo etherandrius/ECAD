@@ -1,8 +1,16 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="0ddabdaf5b38657ff4b5"/>
+    <hash md5_digest_80b="cf882b27cd4e5c9d2859"/>
   </project>
   <file_info>
     <file device="5CSEMA5F31C6" path="toplevel.sof" usercode="0xFFFFFFFF"/>
   </file_info>
+  <sld_infos>
+    <sld_info hpath="rotary_hex:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME rotary_hex HAS_SOPCINFO 1 GENERATION_ID 1510930615"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
 </sld_project_info>

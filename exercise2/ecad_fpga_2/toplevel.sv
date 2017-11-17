@@ -230,34 +230,51 @@ module toplevel(
 
 
       /* wire and register declarations */
-      reg [7:0] binary_codes;
+      reg [7:0] L_binary_codes;
+      reg [7:0] R_binary_codes;
       reg rot_cw;
       reg rot_ccw;
-      reg [6:0] ledcode_l;
-      reg [6:0] ledcode_r;
+      reg [6:0] L_ledcode_l;
+      reg [6:0] L_ledcode_r;
+      reg [6:0] R_ledcode_l;
+      reg [6:0] R_ledcode_r;
 			buttonsT buttons_decoded;
       
 
       /* Instantiate components */
-      rotary rot(.clk(CLOCK_50), .rst(!KEY[1]), .rotary_in(DIALL),
-        .rotary_pos(binary_codes), .rot_cw(rot_cw), .rot_ccw(rot_ccw));
+      rotary L_rot(.clk(CLOCK_50), .rst(!KEY[0]), .rotary_in(DIALL),
+        .rotary_pos(L_binary_codes), .rot_cw(rot_cw), .rot_ccw(rot_ccw));
+      rotary R_rot(.clk(CLOCK_50), .rst(!KEY[0]), .rotary_in(DIALR),
+        .rotary_pos(R_binary_codes), .rot_cw(rot_cw), .rot_ccw(rot_ccw));
 
       shiftregctl shift(.clock_50m(CLOCK_50), .reset(!KEY[0]),
         .shiftreg_clk(SHIFT_CLKIN), .shiftreg_loadn(SHIFT_LOAD),
         .shiftreg_out(SHIFT_OUT), .buttons(buttons_decoded));
 
-      hex_to_7seg left(.hexval(binary_codes[7:4]),
-        .ledcode(ledcode_l));
-      hex_to_7seg right(.hexval(binary_codes[3:0]),
-        .ledcode(ledcode_r));
+      hex_to_7seg L_left(.hexval(L_binary_codes[7:4]),
+        .ledcode(L_ledcode_l));
+      hex_to_7seg L_right(.hexval(L_binary_codes[3:0]),
+        .ledcode(L_ledcode_r));
+
+      hex_to_7seg R_left(.hexval(R_binary_codes[7:4]),
+        .ledcode(R_ledcode_l));
+      hex_to_7seg R_right(.hexval(R_binary_codes[3:0]),
+        .ledcode(R_ledcode_r));
+
+    	rotary_hex u0(
+        	.clk_clk                             (CLOCK_50),
+        	.eightbitstosevenseg_0_led_pins_led0 (HEX0),
+        	.eightbitstosevenseg_0_led_pins_led1 (HEX1),
+        	.reset_reset_n                       (!KEY[1]),
+    	);
 
       /* logic */
       always_comb
       begin
-        HEX5 <= ledcode_r;
-        HEX4 <= ledcode_r;
-        HEX3 <= ledcode_l;
-        HEX2 <= ledcode_l;
+        HEX5 <= L_ledcode_l;
+        HEX4 <= L_ledcode_r;
+        HEX3 <= R_ledcode_l;
+        HEX2 <= R_ledcode_r;
         LEDR[0] <= buttons_decoded.button_x;
         LEDR[1] <= buttons_decoded.button_y;
         LEDR[2] <= buttons_decoded.button_a;
@@ -267,5 +284,7 @@ module toplevel(
         LEDR[6] <= buttons_decoded.nav_r;
         LEDR[7] <= buttons_decoded.nav_d;
       end
+
+
 
 endmodule

@@ -160,10 +160,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[1]",
-					"strict" : false
-				},
-				{
 					"name" : "KEY[0]",
 					"strict" : false
 				},
@@ -172,11 +168,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "DIALL[1]",
+					"name" : "DIALR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DIALR[1]",
 					"strict" : false
 				},
 				{
 					"name" : "DIALL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DIALL[1]",
 					"strict" : false
 				}
 			]
