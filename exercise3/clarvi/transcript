@@ -410,3 +410,996 @@ do clarvi_test.do ../example-asm/build/mem.txt
 # Loading work.clarvi_sv_unit
 # Loading work.clarvi
 
+kk
+# invalid command name "kk"
+
+pwd
+# /home/ecad/git/ECAD/exercise3/clarvi
+
+
+
+
+
+do clarvi_test.do ../example-asm/build/mem.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:48 on Nov 18,2017
+# vlog -reportprogress 300 clarvi.sv 
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 12:27:48 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:48 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 12:27:48 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:48 on Nov 18,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 12:27:48 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:48 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 12:27:48 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:27:49 on Nov 18,2017, Elapsed time: 0:19:58
+# Errors: 1, Warnings: 0
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 12:27:49 on Nov 18,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+do clarvi_test.do ../example-asm/build/mem.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:36:06 on Nov 18,2017
+# vlog -reportprogress 300 clarvi.sv 
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 12:36:06 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:36:06 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 12:36:06 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:36:06 on Nov 18,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 12:36:06 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:36:06 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 12:36:06 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:36:07 on Nov 18,2017, Elapsed time: 0:08:18
+# Errors: 0, Warnings: 0
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 12:36:07 on Nov 18,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+
+
+run 1000us
+# time: 350, '{op:ECALL, rd:zero, rs1:zero, rs2:zero, rs1_used:0, rs2_used:0, immediate_used:0, immediate:x, funct12:F12_ECALL, memory_write:0, memory_read:0, memory_read_unsigned:0, memory_width:B, enable_wb:0, pc:24} instruction at 00000018, stopping simulator
+# ** Note: $stop    : clarvi_debug.sv(44)
+#    Time: 350 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
+# Break in Module clarvi at clarvi_debug.sv line 44
+
+
+do clarvi_test.do ../example-asm/build/mem.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:41 on Nov 18,2017
+# vlog -reportprogress 300 clarvi.sv 
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 12:37:41 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:41 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 12:37:41 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:41 on Nov 18,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 12:37:41 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:41 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 12:37:41 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:37:42 on Nov 18,2017, Elapsed time: 0:01:35
+# Errors: 0, Warnings: 0
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 12:37:42 on Nov 18,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+run 1000us
+# time: 350, '{op:ECALL, rd:zero, rs1:zero, rs2:zero, rs1_used:0, rs2_used:0, immediate_used:0, immediate:x, funct12:F12_ECALL, memory_write:0, memory_read:0, memory_read_unsigned:0, memory_width:B, enable_wb:0, pc:24} instruction at 00000018, stopping simulator
+# ** Note: $stop    : clarvi_debug.sv(44)
+#    Time: 350 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
+# Break in Module clarvi at clarvi_debug.sv line 44
+
+
+run all
+# Invalid time value: all
+run -all
+
+
+stop
+
+
+
+do clarvi_test.do ../example-asm/build/mem.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:22 on Nov 18,2017
+# vlog -reportprogress 300 clarvi.sv 
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 12:40:22 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:22 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 12:40:22 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:22 on Nov 18,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 12:40:23 on Nov 18,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:23 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 12:40:23 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:40:23 on Nov 18,2017, Elapsed time: 0:02:41
+# Errors: 1, Warnings: 0
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 12:40:23 on Nov 18,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+do clarvi_test.do ../example-asm/build/mem.txt TRACE
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:28 on Nov 18,2017
+# vlog -reportprogress 300 clarvi.sv "+define+TRACE" 
+# ** Warning: riscv.svh(39): (vlog-13233) Design unit "clarvi_sv_unit" already exists and will be overwritten. Design unit compiled with different set of options.
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 12:40:28 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:28 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 12:40:28 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:28 on Nov 18,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 12:40:28 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:28 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 12:40:28 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:40:29 on Nov 18,2017, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 1
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 12:40:29 on Nov 18,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+run 1us
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0x00000000:   AUIPC	sp, 0x00010000		sp := 0x00010000 
+# 0x00000004:   ADDI	sp, sp, -32		sp := 0x0000ffe0, sp = 0x00010000 
+# 0x00000008:   AUIPC	t0, 0x00000000		t0 := 0x00000008 
+# 0x0000000c:   ADDI	t0, t0, 20		t0 := 0x0000001c, t0 = 0x00000008 
+# 0x00000010:   CSRRW	zero, MTVEC, t0 
+# 0x00000014:   JAL	ra, 172		ra := 0x00000018, target = 0x000000c0 
+# 0x00000018:   ---
+# 0x0000001c:   ---
+# 0x00000020:   ---
+# 0x000000c0:   ADDI	sp, sp, -32		sp := 0x0000ffc0, sp = 0x0000ffe0 
+# 0x000000c4:   SW	ra, 0(sp)		mem[0000ffc0] := 0x00000018, sp = 0x0000ffc0, ra = 0x00000018 
+# 0x000000c8:   JAL	ra, -28		ra := 0x000000cc, target = 0x000000ac 
+# 0x000000cc:   ---
+# 0x000000d0:   ---
+# 0x000000d4:   ---
+# 0x000000ac:   ADDI	sp, sp, -32		sp := 0x0000ffa0, sp = 0x0000ffc0 
+# 0x000000b0:   SW	ra, 0(sp)		mem[0000ffa0] := 0x000000cc, sp = 0x0000ffa0, ra = 0x000000cc 
+# 0x000000b4:   LW 	ra, 0(sp)		ra := 0x000000cc = mem[0x0000ffa0], sp = 0x0000ffa0 
+# 0x000000b8:   ADDI	sp, sp, 32		sp := 0x0000ffc0, sp = 0x0000ffa0 
+# 0x000000bc:   JALR	zero, ra, 0		, ra = 0x000000cc, target = 0x000000cc 
+# 0x000000c0:   ---
+# 0x000000c4:   ---
+# 0x000000c8:   ---
+# 0x000000cc:   LW 	ra, 0(sp)		ra := 0x00000018 = mem[0x0000ffc0], sp = 0x0000ffc0 
+# 0x000000d0:   ADDI	sp, sp, 32		sp := 0x0000ffe0, sp = 0x0000ffc0 
+# 0x000000d4:   JALR	zero, ra, 0		, ra = 0x00000018, target = 0x00000018 
+# 0x000000d8:   ---
+# 0x000000dc:   ---
+# 0x000000e0:   ---
+# 0x00000018:   ECALL 
+# time: 350, '{op:ECALL, rd:zero, rs1:zero, rs2:zero, rs1_used:0, rs2_used:0, immediate_used:0, immediate:x, funct12:F12_ECALL, memory_write:0, memory_read:0, memory_read_unsigned:0, memory_width:B, enable_wb:0, pc:24} instruction at 00000018, stopping simulator
+# ** Note: $stop    : clarvi_debug.sv(44)
+#    Time: 350 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
+# Break in Module clarvi at clarvi_debug.sv line 44
+
+
+do clarvi_test.do ../example-asm/build/mem.txt TRACE
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:04:45 on Nov 18,2017
+# vlog -reportprogress 300 clarvi.sv "+define+TRACE" 
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 17:04:45 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:04:45 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 17:04:45 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:04:45 on Nov 18,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 17:04:45 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:04:45 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 17:04:45 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:04:46 on Nov 18,2017, Elapsed time: 4:24:17
+# Errors: 0, Warnings: 0
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 17:04:46 on Nov 18,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+run 1us
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0xxxxxxxxx:   ---
+# 0x00000000:   AUIPC	sp, 0x00010000		sp := 0x00010000 
+# 0x00000004:   ADDI	sp, sp, -32		sp := 0x0000ffe0, sp = 0x00010000 
+# 0x00000008:   AUIPC	t0, 0x00000000		t0 := 0x00000008 
+# 0x0000000c:   ADDI	t0, t0, 84		t0 := 0x0000005c, t0 = 0x00000008 
+# 0x00000010:   CSRRW	zero, MTVEC, t0 
+# 0x00000014:   JAL	ra, 168		ra := 0x00000018, target = 0x000000bc 
+# 0x00000018:   ---
+# 0x0000001c:   ---
+# 0x00000020:   ---
+# 0x000000bc:   ADDI	sp, sp, -32		sp := 0x0000ffc0, sp = 0x0000ffe0 
+# 0x000000c0:   SW	ra, 0(sp)		mem[0000ffc0] := 0x00000018, sp = 0x0000ffc0, ra = 0x00000018 
+# 0x000000c4:   JAL	ra, -28		ra := 0x000000c8, target = 0x000000a8 
+# 0x000000c8:   ---
+# 0x000000cc:   ---
+# 0x000000d0:   ---
+# 0x000000a8:   ADDI	sp, sp, -32		sp := 0x0000ffa0, sp = 0x0000ffc0 
+# 0x000000ac:   SW	ra, 0(sp)		mem[0000ffa0] := 0x000000c8, sp = 0x0000ffa0, ra = 0x000000c8 
+# 0x000000b0:   LW 	ra, 0(sp)		ra := 0x000000c8 = mem[0x0000ffa0], sp = 0x0000ffa0 
+# 0x000000b4:   ADDI	sp, sp, 32		sp := 0x0000ffc0, sp = 0x0000ffa0 
+# 0x000000b8:   JALR	zero, ra, 0		, ra = 0x000000c8, target = 0x000000c8 
+# 0x000000bc:   ---
+# 0x000000c0:   ---
+# 0x000000c4:   ---
+# 0x000000c8:   LW 	ra, 0(sp)		ra := 0x00000018 = mem[0x0000ffc0], sp = 0x0000ffc0 
+# 0x000000cc:   ADDI	sp, sp, 32		sp := 0x0000ffe0, sp = 0x0000ffc0 
+# 0x000000d0:   JALR	zero, ra, 0		, ra = 0x00000018, target = 0x00000018 
+# 0x000000d4:   ---
+# 0x000000d8:   ---
+# 0x000000dc:   ---
+# 0x00000018:   ADDI	a0, zero, 12		a0 := 0x0000000c,  
+# 0x0000001c:   ADDI	a1, zero, 4		a1 := 0x00000004,  
+# 0x00000020:   JAL	ra, 64		ra := 0x00000024, target = 0x00000060 
+# 0x00000024:   ---
+# 0x00000028:   ---
+# 0x0000002c:   ---
+# 0x00000060:   BLT	zero, a1, 0x00000068	a1 = 0x00000004, branch     taken 
+# 0x00000064:   ---
+# 0x00000068:   ---
+# 0x0000006c:   ---
+# 0x00000068:   ADDI	a3, zero, 1		a3 := 0x00000001,  
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00000008, a1 = 0x00000004 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000002, a3 = 0x00000001 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00000008, a0 = 0x0000000c, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00000010, a1 = 0x00000008 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000004, a3 = 0x00000002 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00000010, a0 = 0x0000000c, branch not taken 
+# 0x00000078:   SRAI	a1, a1, 1025		a1 := 0x00000008, a1 = 0x00000010 
+# 0x0000007c:   SRAI	a3, a3, 1025		a3 := 0x00000002, a3 = 0x00000004 
+# 0x00000080:   ADDI	a4, zero, 0		a4 := 0x00000000,  
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x0000000c, a1 = 0x00000008, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000004, a0 = 0x0000000c, a1 = 0x00000008 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00000002, a4 = 0x00000000, a3 = 0x00000002 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00000004, a1 = 0x00000008 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000001, a3 = 0x00000002 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000001, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000004, a1 = 0x00000004, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000000, a0 = 0x00000004, a1 = 0x00000004 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00000003, a4 = 0x00000002, a3 = 0x00000001 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00000002, a1 = 0x00000004 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000000, a3 = 0x00000001 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000000, branch not taken 
+# 0x0000009c:   ADDI	a1, a0, 0		a1 := 0x00000000, a0 = 0x00000000 
+# 0x000000a0:   ADDI	a0, a4, 0		a0 := 0x00000003, a4 = 0x00000003 
+# 0x000000a4:   JALR	zero, ra, 0		, ra = 0x00000024, target = 0x00000024 
+# 0x000000a8:   ---
+# 0x000000ac:   ---
+# 0x000000b0:   ---
+# Debug output: a0 = 0x00000003
+# 0x00000024:   CSRRW	zero, DSCRATCH, a0 
+# Debug output: a1 = 0x00000000
+# 0x00000028:   CSRRW	zero, DSCRATCH, a1 
+# 0x0000002c:   ADDI	a0, zero, 93		a0 := 0x0000005d,  
+# 0x00000030:   ADDI	a1, zero, 7		a1 := 0x00000007,  
+# 0x00000034:   JAL	ra, 44		ra := 0x00000038, target = 0x00000060 
+# 0x00000038:   ---
+# 0x0000003c:   ---
+# 0x00000040:   ---
+# 0x00000060:   BLT	zero, a1, 0x00000068	a1 = 0x00000007, branch     taken 
+# 0x00000064:   ---
+# 0x00000068:   ---
+# 0x0000006c:   ---
+# 0x00000068:   ADDI	a3, zero, 1		a3 := 0x00000001,  
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x0000000e, a1 = 0x00000007 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000002, a3 = 0x00000001 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x0000000e, a0 = 0x0000005d, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x0000001c, a1 = 0x0000000e 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000004, a3 = 0x00000002 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x0000001c, a0 = 0x0000005d, branch     taken 
+# 0x00000078:   ---
+run 1000us
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00000038, a1 = 0x0000001c 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000008, a3 = 0x00000004 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00000038, a0 = 0x0000005d, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00000070, a1 = 0x00000038 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000010, a3 = 0x00000008 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00000070, a0 = 0x0000005d, branch not taken 
+# 0x00000078:   SRAI	a1, a1, 1025		a1 := 0x00000038, a1 = 0x00000070 
+# 0x0000007c:   SRAI	a3, a3, 1025		a3 := 0x00000008, a3 = 0x00000010 
+# 0x00000080:   ADDI	a4, zero, 0		a4 := 0x00000000,  
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x0000005d, a1 = 0x00000038, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000025, a0 = 0x0000005d, a1 = 0x00000038 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00000008, a4 = 0x00000000, a3 = 0x00000008 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x0000001c, a1 = 0x00000038 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000004, a3 = 0x00000008 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000004, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000025, a1 = 0x0000001c, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000009, a0 = 0x00000025, a1 = 0x0000001c 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x0000000c, a4 = 0x00000008, a3 = 0x00000004 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x0000000e, a1 = 0x0000001c 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000002, a3 = 0x00000004 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000002, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000009, a1 = 0x0000000e, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00000007, a1 = 0x0000000e 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000001, a3 = 0x00000002 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000001, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000009, a1 = 0x00000007, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000002, a0 = 0x00000009, a1 = 0x00000007 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x0000000d, a4 = 0x0000000c, a3 = 0x00000001 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00000003, a1 = 0x00000007 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000000, a3 = 0x00000001 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000000, branch not taken 
+# 0x0000009c:   ADDI	a1, a0, 0		a1 := 0x00000002, a0 = 0x00000002 
+# 0x000000a0:   ADDI	a0, a4, 0		a0 := 0x0000000d, a4 = 0x0000000d 
+# 0x000000a4:   JALR	zero, ra, 0		, ra = 0x00000038, target = 0x00000038 
+# 0x000000a8:   ---
+# 0x000000ac:   ---
+# 0x000000b0:   ---
+# Debug output: a0 = 0x0000000d
+# 0x00000038:   CSRRW	zero, DSCRATCH, a0 
+# Debug output: a1 = 0x00000002
+# 0x0000003c:   CSRRW	zero, DSCRATCH, a1 
+# 0x00000040:   LUI	a0, 0x12345000		a0 := 0x12345000 
+# 0x00000044:   ORI	a0, a0, 1656		a0 := 0x12345678, a0 = 0x12345000 
+# 0x00000048:   ADDI	a1, zero, 255		a1 := 0x000000ff,  
+# 0x0000004c:   JAL	ra, 20		ra := 0x00000050, target = 0x00000060 
+# 0x00000050:   ---
+# 0x00000054:   ---
+# 0x00000058:   ---
+# 0x00000060:   BLT	zero, a1, 0x00000068	a1 = 0x000000ff, branch     taken 
+# 0x00000064:   ---
+# 0x00000068:   ---
+# 0x0000006c:   ---
+# 0x00000068:   ADDI	a3, zero, 1		a3 := 0x00000001,  
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x000001fe, a1 = 0x000000ff 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000002, a3 = 0x00000001 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x000001fe, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x000003fc, a1 = 0x000001fe 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000004, a3 = 0x00000002 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x000003fc, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x000007f8, a1 = 0x000003fc 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000008, a3 = 0x00000004 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x000007f8, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00000ff0, a1 = 0x000007f8 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000010, a3 = 0x00000008 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00000ff0, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00001fe0, a1 = 0x00000ff0 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000020, a3 = 0x00000010 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00001fe0, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00003fc0, a1 = 0x00001fe0 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000040, a3 = 0x00000020 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00003fc0, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00007f80, a1 = 0x00003fc0 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000080, a3 = 0x00000040 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00007f80, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x0000ff00, a1 = 0x00007f80 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000100, a3 = 0x00000080 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x0000ff00, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x0001fe00, a1 = 0x0000ff00 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000200, a3 = 0x00000100 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x0001fe00, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x0003fc00, a1 = 0x0001fe00 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000400, a3 = 0x00000200 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x0003fc00, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x0007f800, a1 = 0x0003fc00 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00000800, a3 = 0x00000400 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x0007f800, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x000ff000, a1 = 0x0007f800 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00001000, a3 = 0x00000800 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x000ff000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x001fe000, a1 = 0x000ff000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00002000, a3 = 0x00001000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x001fe000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x003fc000, a1 = 0x001fe000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00004000, a3 = 0x00002000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x003fc000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x007f8000, a1 = 0x003fc000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00008000, a3 = 0x00004000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x007f8000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x00ff0000, a1 = 0x007f8000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00010000, a3 = 0x00008000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x00ff0000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x01fe0000, a1 = 0x00ff0000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00020000, a3 = 0x00010000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x01fe0000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x03fc0000, a1 = 0x01fe0000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00040000, a3 = 0x00020000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x03fc0000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x07f80000, a1 = 0x03fc0000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00080000, a3 = 0x00040000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x07f80000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x0ff00000, a1 = 0x07f80000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00100000, a3 = 0x00080000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x0ff00000, a0 = 0x12345678, branch     taken 
+# 0x00000078:   ---
+# 0x0000007c:   ---
+# 0x00000080:   ---
+# 0x0000006c:   SLI	a1, a1, 1		a1 := 0x1fe00000, a1 = 0x0ff00000 
+# 0x00000070:   SLI	a3, a3, 1		a3 := 0x00200000, a3 = 0x00100000 
+# 0x00000074:   BLT	a1, a0, 0x0000006c	a1 = 0x1fe00000, a0 = 0x12345678, branch not taken 
+# 0x00000078:   SRAI	a1, a1, 1025		a1 := 0x0ff00000, a1 = 0x1fe00000 
+# 0x0000007c:   SRAI	a3, a3, 1025		a3 := 0x00100000, a3 = 0x00200000 
+# 0x00000080:   ADDI	a4, zero, 0		a4 := 0x00000000,  
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x12345678, a1 = 0x0ff00000, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x02445678, a0 = 0x12345678, a1 = 0x0ff00000 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00100000, a4 = 0x00000000, a3 = 0x00100000 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x07f80000, a1 = 0x0ff00000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00080000, a3 = 0x00100000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00080000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x02445678, a1 = 0x07f80000, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x03fc0000, a1 = 0x07f80000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00040000, a3 = 0x00080000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00040000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x02445678, a1 = 0x03fc0000, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x01fe0000, a1 = 0x03fc0000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00020000, a3 = 0x00040000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00020000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x02445678, a1 = 0x01fe0000, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00465678, a0 = 0x02445678, a1 = 0x01fe0000 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00120000, a4 = 0x00100000, a3 = 0x00020000 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00ff0000, a1 = 0x01fe0000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00010000, a3 = 0x00020000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00010000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00465678, a1 = 0x00ff0000, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x007f8000, a1 = 0x00ff0000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00008000, a3 = 0x00010000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00008000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00465678, a1 = 0x007f8000, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x003fc000, a1 = 0x007f8000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00004000, a3 = 0x00008000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00004000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00465678, a1 = 0x003fc000, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00069678, a0 = 0x00465678, a1 = 0x003fc000 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00124000, a4 = 0x00120000, a3 = 0x00004000 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x001fe000, a1 = 0x003fc000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00002000, a3 = 0x00004000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00002000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00069678, a1 = 0x001fe000, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x000ff000, a1 = 0x001fe000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00001000, a3 = 0x00002000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00001000, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00069678, a1 = 0x000ff000, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x0007f800, a1 = 0x000ff000 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000800, a3 = 0x00001000 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000800, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00069678, a1 = 0x0007f800, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x0003fc00, a1 = 0x0007f800 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000400, a3 = 0x00000800 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000400, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00069678, a1 = 0x0003fc00, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00029a78, a0 = 0x00069678, a1 = 0x0003fc00 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00124400, a4 = 0x00124000, a3 = 0x00000400 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x0001fe00, a1 = 0x0003fc00 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000200, a3 = 0x00000400 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000200, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00029a78, a1 = 0x0001fe00, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00009c78, a0 = 0x00029a78, a1 = 0x0001fe00 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00124600, a4 = 0x00124400, a3 = 0x00000200 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x0000ff00, a1 = 0x0001fe00 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000100, a3 = 0x00000200 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000100, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00009c78, a1 = 0x0000ff00, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00007f80, a1 = 0x0000ff00 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000080, a3 = 0x00000100 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000080, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00009c78, a1 = 0x00007f80, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00001cf8, a0 = 0x00009c78, a1 = 0x00007f80 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00124680, a4 = 0x00124600, a3 = 0x00000080 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00003fc0, a1 = 0x00007f80 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000040, a3 = 0x00000080 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000040, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00001cf8, a1 = 0x00003fc0, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00001fe0, a1 = 0x00003fc0 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000020, a3 = 0x00000040 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000020, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00001cf8, a1 = 0x00001fe0, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x00000ff0, a1 = 0x00001fe0 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000010, a3 = 0x00000020 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000010, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00001cf8, a1 = 0x00000ff0, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000d08, a0 = 0x00001cf8, a1 = 0x00000ff0 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00124690, a4 = 0x00124680, a3 = 0x00000010 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x000007f8, a1 = 0x00000ff0 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000008, a3 = 0x00000010 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000008, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000d08, a1 = 0x000007f8, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000510, a0 = 0x00000d08, a1 = 0x000007f8 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x00124698, a4 = 0x00124690, a3 = 0x00000008 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x000003fc, a1 = 0x000007f8 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000004, a3 = 0x00000008 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000004, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000510, a1 = 0x000003fc, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000114, a0 = 0x00000510, a1 = 0x000003fc 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x0012469c, a4 = 0x00124698, a3 = 0x00000004 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x000001fe, a1 = 0x000003fc 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000002, a3 = 0x00000004 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000002, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000114, a1 = 0x000001fe, branch     taken 
+# 0x00000088:   ---
+# 0x0000008c:   ---
+# 0x00000090:   ---
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x000000ff, a1 = 0x000001fe 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000001, a3 = 0x00000002 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000001, branch     taken 
+# 0x0000009c:   ---
+# 0x000000a0:   ---
+# 0x000000a4:   ---
+# 0x00000084:   BLT	a0, a1, 0x00000090	a0 = 0x00000114, a1 = 0x000000ff, branch not taken 
+# 0x00000088:   SUB	a0, a0, a1		a0 := 0x00000015, a0 = 0x00000114, a1 = 0x000000ff 
+# 0x0000008c:   ADD	a4, a4, a3		a4 := 0x0012469d, a4 = 0x0012469c, a3 = 0x00000001 
+# 0x00000090:   SRAI	a1, a1, 1025		a1 := 0x0000007f, a1 = 0x000000ff 
+# 0x00000094:   SRAI	a3, a3, 1025		a3 := 0x00000000, a3 = 0x00000001 
+# 0x00000098:   BLT	zero, a3, 0x00000084	a3 = 0x00000000, branch not taken 
+# 0x0000009c:   ADDI	a1, a0, 0		a1 := 0x00000015, a0 = 0x00000015 
+# 0x000000a0:   ADDI	a0, a4, 0		a0 := 0x0012469d, a4 = 0x0012469d 
+# 0x000000a4:   JALR	zero, ra, 0		, ra = 0x00000050, target = 0x00000050 
+# 0x000000a8:   ---
+# 0x000000ac:   ---
+# 0x000000b0:   ---
+# Debug output: a0 = 0x0012469d
+# 0x00000050:   CSRRW	zero, DSCRATCH, a0 
+# Debug output: a1 = 0x00000015
+# 0x00000054:   CSRRW	zero, DSCRATCH, a1 
+# 0x00000058:   ECALL 
+# time: 5010, '{op:ECALL, rd:zero, rs1:zero, rs2:zero, rs1_used:0, rs2_used:0, immediate_used:0, immediate:x, funct12:F12_ECALL, memory_write:0, memory_read:0, memory_read_unsigned:0, memory_width:B, enable_wb:0, pc:88} instruction at 00000058, stopping simulator
+# ** Note: $stop    : clarvi_debug.sv(44)
+#    Time: 5010 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
+# Break in Module clarvi at clarvi_debug.sv line 44
+do clarvi_test.do ../example-asm/build/mem.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:05:14 on Nov 18,2017
+# vlog -reportprogress 300 clarvi.sv 
+# ** Warning: riscv.svh(39): (vlog-13233) Design unit "clarvi_sv_unit" already exists and will be overwritten. Design unit compiled with different set of options.
+# -- Compiling package clarvi_sv_unit
+# -- Compiling module clarvi
+# 
+# Top level modules:
+# 	clarvi
+# End time: 17:05:14 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:05:14 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_avalon.sv 
+# -- Compiling module clarvi_avalon
+# 
+# Top level modules:
+# 	clarvi_avalon
+# End time: 17:05:14 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:05:14 on Nov 18,2017
+# vlog -reportprogress 300 bram.sv 
+# -- Compiling module dual_port_bram
+# 
+# Top level modules:
+# 	dual_port_bram
+# End time: 17:05:14 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:05:14 on Nov 18,2017
+# vlog -reportprogress 300 clarvi_sim.sv 
+# -- Compiling module clarvi_sim
+# -- Compiling module memory_debug
+# -- Compiling module mock_waitrequest
+# -- Compiling module mock_interrupt
+# 
+# Top level modules:
+# 	clarvi_sim
+# 	mock_waitrequest
+# 	mock_interrupt
+# End time: 17:05:14 on Nov 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:05:15 on Nov 18,2017, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 1
+# vsim work.clarvi_sim -t ns -voptargs="+acc=npr" -GINIT_FILE=../example-asm/build/mem.txt 
+# Start time: 17:05:15 on Nov 18,2017
+# Loading sv_std.std
+# Loading work.clarvi_sim
+# Loading work.dual_port_bram
+# Loading work.memory_debug
+# Loading work.clarvi_avalon
+# Loading work.clarvi_sv_unit
+# Loading work.clarvi
+run 1000us
+# Debug output: a0 = 0x00000003
+# Debug output: a1 = 0x00000000
+# Debug output: a0 = 0x0000000d
+# Debug output: a1 = 0x00000002
+# Debug output: a0 = 0x0012469d
+# Debug output: a1 = 0x00000015
+# time: 5010, '{op:ECALL, rd:zero, rs1:zero, rs2:zero, rs1_used:0, rs2_used:0, immediate_used:0, immediate:x, funct12:F12_ECALL, memory_write:0, memory_read:0, memory_read_unsigned:0, memory_width:B, enable_wb:0, pc:88} instruction at 00000058, stopping simulator
+# ** Note: $stop    : clarvi_debug.sv(44)
+#    Time: 5010 ns  Iteration: 1  Instance: /clarvi_sim/clarvi/clarvi
+# Break in Module clarvi at clarvi_debug.sv line 44
+k
+
+
+
+

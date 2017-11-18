@@ -1,0 +1,227 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecad/git/ECAD/exercise3
+vclarvi
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+DXx4 work 14 clarvi_sv_unit 0 22 db5GGbj`ia`PYo_Wd=eNa0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ^SVzN<ciH]jTeIMm`@ZJh0
+IDF]fVe6PWlXL[Yf<4lRj93
+!s105 clarvi_sv_unit
+S1
+R0
+Z3 w1505592978
+Z4 8/home/ecad/git/ECAD/exercise3/clarvi/clarvi.sv
+Z5 F/home/ecad/git/ECAD/exercise3/clarvi/clarvi.sv
+F/home/ecad/git/ECAD/exercise3/clarvi/clarvi_debug.sv
+L0 74
+Z6 OV;L;10.5b;63
+Z7 !s108 1510970598.000000
+Z8 !s107 /home/ecad/git/ECAD/exercise3/clarvi/clarvi_debug.sv|/home/ecad/git/ECAD/exercise3/clarvi/riscv.svh|/home/ecad/git/ECAD/exercise3/clarvi/clarvi.sv|
+Z9 !s90 -reportprogress|300|-work|work|/home/ecad/git/ECAD/exercise3/clarvi/clarvi.sv|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vclarvi_avalon
+R1
+Z12 !s110 1510970598
+!i10b 1
+!s100 ;8oT_9[:XmYOIAEY@m@]f0
+IWomGFbR0L:08DEU]?zMja2
+R2
+!s105 clarvi_avalon_sv_unit
+S1
+R0
+R3
+8/home/ecad/git/ECAD/exercise3/clarvi/clarvi_avalon.sv
+F/home/ecad/git/ECAD/exercise3/clarvi/clarvi_avalon.sv
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ecad/git/ECAD/exercise3/clarvi/clarvi_avalon.sv|
+!s90 -reportprogress|30|-work|work|/home/ecad/git/ECAD/exercise3/clarvi/clarvi_avalon.sv|
+!i113 1
+R10
+R11
+vclarvi_sim
+R1
+R12
+!i10b 1
+!s100 ll0BdaBZW;@g1@MfE1^J02
+Ii>_W1nJjW91So6F]iSXFZ3
+R2
+Z13 !s105 clarvi_sim_sv_unit
+S1
+R0
+R3
+Z14 8/home/ecad/git/ECAD/exercise3/clarvi/clarvi_sim.sv
+Z15 F/home/ecad/git/ECAD/exercise3/clarvi/clarvi_sim.sv
+Z16 L0 29
+R6
+r1
+!s85 0
+31
+R7
+Z17 !s107 /home/ecad/git/ECAD/exercise3/clarvi/clarvi_sim.sv|
+Z18 !s90 -reportprogress|30|-work|work|/home/ecad/git/ECAD/exercise3/clarvi/clarvi_sim.sv|
+!i113 1
+R10
+R11
+Xclarvi_sv_unit
+R1
+Vdb5GGbj`ia`PYo_Wd=eNa0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Zl2zJoKTWR<KbCmmSfKEc2
+Idb5GGbj`ia`PYo_Wd=eNa0
+!i103 1
+S1
+R0
+R3
+R4
+R5
+Z19 F/home/ecad/git/ECAD/exercise3/clarvi/riscv.svh
+Z20 L0 39
+R6
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdual_port_bram
+R1
+R12
+!i10b 1
+!s100 0T3jR@WEPBNe>`D8zGClI0
+I76]JhlAGfCl[daC_BBd?n0
+R2
+!s105 bram_sv_unit
+S1
+R0
+R3
+8/home/ecad/git/ECAD/exercise3/clarvi/bram.sv
+F/home/ecad/git/ECAD/exercise3/clarvi/bram.sv
+R16
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ecad/git/ECAD/exercise3/clarvi/bram.sv|
+!s90 -reportprogress|300|-work|work|/home/ecad/git/ECAD/exercise3/clarvi/bram.sv|
+!i113 1
+R10
+R11
+vmemory_debug
+R1
+R12
+!i10b 1
+!s100 N7On;XT9BW;VY;hY=nzZK2
+IIl_`k<KNSDoJ=oFgiFH3A3
+R2
+R13
+S1
+R0
+R3
+R14
+R15
+L0 131
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 1
+R10
+R11
+vmock_interrupt
+R1
+R12
+!i10b 1
+!s100 CZ9_DWC^jG^KJH@35IFk51
+IXBBI_mQc?LGiN@Go8K3gd1
+R2
+R13
+S1
+R0
+R3
+R14
+R15
+L0 177
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 1
+R10
+R11
+vmock_waitrequest
+R1
+R12
+!i10b 1
+!s100 [37BI6;HjU@D0PhIdXAlH1
+I]X0Cl2AVaS=b[R7Il:6j92
+R2
+R13
+S1
+R0
+R3
+R14
+R15
+L0 155
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 1
+R10
+R11
+Xriscv_svh_unit
+R1
+R12
+!i10b 1
+!s100 ];@>=10^z3Wck7hX^8R^K3
+I]3a_Y]ElG;8n7CiRGWWOA3
+V]3a_Y]ElG;8n7CiRGWWOA3
+!i103 1
+S1
+R0
+R3
+8/home/ecad/git/ECAD/exercise3/clarvi/riscv.svh
+R19
+R20
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ecad/git/ECAD/exercise3/clarvi/riscv.svh|
+!s90 -reportprogress|30|-work|work|/home/ecad/git/ECAD/exercise3/clarvi/riscv.svh|
+!i113 1
+R10
+R11

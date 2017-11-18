@@ -1,29 +1,8 @@
-.macro  DEBUG_PRINT     reg
-csrw 0x7b2, \reg
-.endm
-  addi    a0, zero, 12    # a0 <- 12
-  addi    a1, zero, 4     # a1 <- 4
-  call    div
-  DEBUG_PRINT a0          # display the quotient
-  DEBUG_PRINT a1          # display the remainder
-
-  addi    a0, zero, 93    # a0 <- 93
-  addi    a1, zero, 7     # a1 <- 7
-  call    div
-  DEBUG_PRINT a0          # display the quotient
-  DEBUG_PRINT a1          # display the remainder
-
-  lui     a0, (0x12345000>>12)
-  ori     a0, a0, 0x678   # a0 <- 0x12345678
-  addi    a1, zero, 255   # a1 <- 255
-  call    div
-  DEBUG_PRINT a0          # display the quotient
-  DEBUG_PRINT a1          # display the remainder
-  ecall
-
 #
 # MY CODE START
 #
+.global div # export div
+.type div, @function
 div:
   bgt a1,x0,.start    # a0 = N, a1 = D
   ecall
@@ -48,6 +27,7 @@ div:
 
   addi a1,a0,0        # a1 = N(remainder)
   addi a0,a4,0        # a0 = Result
+  ret
 #
 # MY CODE END
 #
