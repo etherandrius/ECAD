@@ -11,7 +11,7 @@ div:
 .prescale:
   sll a1,a1,1         # D << 1
   sll a3,a3,1         # p << 1
-  bgt a0,a1,.prescale # repeat if N > D
+  bge a0,a1,.prescale # repeat if N >= D
 	sra	a1,a1,1         # D >> 1
 	sra	a3,a3,1         # p >> 1
 
