@@ -16,8 +16,8 @@ int bound(int x, int low, int high){
 }
 
 void clear_screen(){
-	for(int x=0; x<DISPLAY_HEIGHT; x++)
-		for(int y=0; y<DISPLAY_WIDTH; y++)
+	for(int x=0; x<DISPLAY_WIDTH; x++)
+		for(int y=0; y<DISPLAY_HEIGHT; y++)
 			vid_set_pixel(x,y,PIXEL_BLACK);
 }
 
