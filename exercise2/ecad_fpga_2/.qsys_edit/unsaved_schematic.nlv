@@ -1,8 +1,16 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
+preplace inst unsaved.RotaryCtl_0 -pg 1 -lvl 2 -y 150
+preplace inst unsaved.EightBitsToSevenSeg_0 -pg 1 -lvl 2 -y 50
 preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
 preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
 preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)unsaved.reset) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)EightBitsToSevenSeg_0.led_pins,(SLAVE)unsaved.eightbitstosevenseg_0_led_pins) 1 0 2 NJ 100 NJ
+preplace netloc FAN_OUT<net_container>unsaved</net_container>(SLAVE)RotaryCtl_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)EightBitsToSevenSeg_0.reset) 1 1 1 410
+preplace netloc FAN_OUT<net_container>unsaved</net_container>(SLAVE)EightBitsToSevenSeg_0.clock,(MASTER)clk_0.clk,(SLAVE)RotaryCtl_0.clock) 1 1 1 430
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.rotaryctl_0_rotary_event,(SLAVE)RotaryCtl_0.rotary_event) 1 0 2 NJ 200 NJ
+preplace netloc POINT_TO_POINT<net_container>unsaved</net_container>(SLAVE)RotaryCtl_0.rotary_pos,(SLAVE)EightBitsToSevenSeg_0.data_in) 1 1 1 450
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)RotaryCtl_0.rotary_in,(SLAVE)unsaved.rotaryctl_0_rotary_in) 1 0 2 NJ 220 NJ
+levelinfo -pg 1 0 200 650
+levelinfo -hier unsaved 210 240 510 640
