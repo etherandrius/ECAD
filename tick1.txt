@@ -1,0 +1,66 @@
+
+1.
+// a module containing two 8-bit counters
+// If latch is high, we store and output the two 8-bit counter values
+// If latch is not high, the two outputs swap on each clock cycle
+
+module alternating_counters(
+  input clock,
+  input reset,
+  input latch,
+  output logic out_a,
+  output logic out_b
+);
+
+  logic [7:0] count_a;
+  logic [7:0] count_b;
+
+  initial begin
+    count_a <= 8'h0;
+    count_b <= 8'h80;
+  end
+     
+  always @(clock) begin // -> always_ff @(posedge clock)
+
+    count_a <= count_a - 1;
+    count_b <= count_b + 1;
+
+    out_b = latch ? count_b : out_a; // = -> <=
+    out_a = latch ? count_a : out_b; // = -> <=, too make it a non blocking assignment
+		// in the current case if lathc=0 both values get set to out_a.
+
+  end
+   
+endmodule
+
+2.
+according to timimng analysis in one of the exercises my slowest component can run with a 
+frequency of about 300Mhz, so changing the clock speed (crystal) from 50 to 500 would force the 
+component to fail as it would not have enough time to finish.
+
+3.
+
+let #N, #D be the position of MST bit of N and D respectively.
+
+going through the code.
+#
+# MY CODE START
+#
+.global div # export div
+.type div, @function
+	1 assignment.
+	(|#N - #D|*2 + 2) bit shifts
+	(|#N - #D|) if statements
+	1 assignment
+	#N if's
+	#N subtractions
+  #N additions
+	#N*2 bit shifts 
+	#N if's
+	2 additions
+	1 return
+
+	total : 
+	7 + 8*#N - 3#D instructions and clock cycles needed.
+	
+
