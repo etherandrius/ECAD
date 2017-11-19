@@ -1,0 +1,15 @@
+
+
+  1.
+    Separate 
+      - better program security we can terminate the program 
+          - when it goes out of it's instruction memory space, we can prevent rogue programs from
+          interpreting random memory as their instructions.
+          - we can prevent programs from self modifying.
+      - safer as we won't be able accidentally modify our own program.
+    Same
+      - can use instructions as data
+
+  2.
+    clarvi doesn't have any caches so having multiple CPUs would oversaturate the memory bus, and
+    most cpus would spend their time idling.
