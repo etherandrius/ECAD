@@ -8,7 +8,7 @@ module alternating_counters(
   input clock,
   input reset,
   input latch,
-  output logic out_a,
+  output logic out_a, // shouldbe size [7:0]
   output logic out_b
 );
 
